@@ -5,18 +5,19 @@ class BaseConnect(object):
 
 	__metaclass__ = abc.ABCMeta
 
-	def __init__(self, host, path):
-		self.host = host
+	def __init__(self, path, sheet):
 		self.path = path 
+		self.sheet = sheet
 		
 
 
 	@abc.abstractmethod
 	def readExcel(self):
 		pass
-
+'''
 	@abc.abstractmethod
 	def readDatabase(self):
 		pass
 
+'''
 	
