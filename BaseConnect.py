@@ -9,8 +9,6 @@ class BaseConnect(object):
 		self.path = path 
 		self.sheet = sheet
 		
-
-
 	@abc.abstractmethod
 	def readExcel(self):
 		pass
@@ -18,6 +16,5 @@ class BaseConnect(object):
 	@abc.abstractmethod
 	def readDatabase(self):
 		pass
-
 '''
 	
