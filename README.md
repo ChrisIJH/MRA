@@ -23,7 +23,7 @@
 ####ClassicVolCorr.UnCondVol.getUndCondVol
 ####MRA - test - UnCondValTest.py
 
-### Example II.3.5 Equally Weighted Average Estimate of FTSE 100  Volatility (II)
+### Example II.3.6 Equally Weighted Average Estimate of FTSE 100  Volatility (II)
 ####ClassicVolCorr.UnCondVol.getUndCondVol_no_zero_mean
 ####MRA - test - UnCondVal_no_zero_meanTest.py
 <hr>
