@@ -1,4 +1,4 @@
-from MRA.ClassiVolCorr import  PortVariance
+from MRA.ClassicVolCorr import  PortVariance
 import unittest
 import numpy as np
 

@@ -61,7 +61,19 @@ class UnCondVol:
 		'''
 		self.data = data
 
-	def getUncondVol()
+	def getUnCondVol(self):
+		ret = self.data.pct_change()[1:]
+		f = lambda x: x**2
+		res = round(np.sqrt((ret.applymap(f).sum()/ret.shape[0])*250), 3)
+		return  res
+
+	def getUnCondVol_no_zero_mean(self):
+		ret = self.data.pct_change()[1:]
+		mean_ret = ret.mean()[0]
+		f = lambda x: (x - mean_ret)**2
+		res = round(np.sqrt(ret.applymap(f).sum()/(ret.shape[0]-1))*np.sqrt(250), 3)
+		return  res
+
 
 
 
