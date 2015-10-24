@@ -6,14 +6,17 @@ Disp.preTag
 
 ## II.3 
 ### Example II.3.2 Estimating Volatility for Hedge Funds
-ClassicVolCorr.VolCorr
+####ClassicVolCorr.VolCorr
+<p>Using AR(1) Scaling Factor for measuring volatility</p>
 
 ### Example II.3.3 Portfolio Variance
-ClassicVolCorr.PortVariance
+####ClassicVolCorr.PortVariance
 
+### Example II.3.4 Scaling and decomposition of covariance matrix
+####ClassicVolCorr.PortVariance
 <hr>
 
 ### Mean Variance Optimization Test
-PortOpt - MV.py
-       	 - data.xls
+PortOpt / MV.py  
+               /data.xls
 

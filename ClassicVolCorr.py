@@ -39,8 +39,29 @@ class PortVariance(object):
 	@preTag("Ex II.3.3")
 	def __str__(self):
 		return "C: \n %s \n D: \n %s \n V: \n %s" % (self.C, self.D, self.V)
+	
+	@preTag("EX II.3.4")
+	def getScaledDecomposed_VCV(self):
+		"""Ex II.3.4 pg 97"""
+		new_V = self.V/25
+		new_D = np.sqrt(new_V)
+		an_V = ((new_D).dot(self.C)).dot(new_D)
+		result = "10 day V can be obtained by V/25 --> V10\n" 
+		result += str(new_V)
+		result += "\n" 
+		result += "sqrt(V10) is D10" 
+		result += "\n" + str(new_D) + "\n" + "D10 * C * D10 is \n" + str(an_V)
+		return result
+
+class UnCondVol:
+	def __init__(self, data):
+		'''
+		arg:
+		data - dataframe of time series data
+		'''
+		self.data = data
+
+	def getUncondVol()
 
 
 
-
-		
