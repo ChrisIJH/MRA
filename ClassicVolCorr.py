@@ -1,6 +1,7 @@
 import math
 from Disp import preTag
 import numpy as np
+import pandas as pd
 
 """Python Implemented Examples in Market Risk Analysis by Carol Alexander"""
 
@@ -62,17 +63,38 @@ class UnCondVol:
 		self.data = data
 
 	def getUnCondVol(self):
-		ret = self.data.pct_change()[1:]
+		"""Ex II.3.5"""
+		self.zero_mean_ret = self.data.pct_change()[1:]
 		f = lambda x: x**2
-		res = round(np.sqrt((ret.applymap(f).sum()/ret.shape[0])*250), 3)
-		return  res
+		self.zero_mean_vol = round(np.sqrt((self.zero_mean_ret.applymap(f).sum()/self.zero_mean_ret.shape[0])*250), 3)
+		return  self.zero_mean_vol
 
 	def getUnCondVol_no_zero_mean(self):
-		ret = self.data.pct_change()[1:]
-		mean_ret = ret.mean()[0]
+		"""Ex II.3.6"""
+		self.no_zero_mean_ret = self.data.pct_change()[1:]
+		mean_ret = self.no_zero_mean_ret.mean()[0]
 		f = lambda x: (x - mean_ret)**2
-		res = round(np.sqrt(ret.applymap(f).sum()/(ret.shape[0]-1))*np.sqrt(250), 3)
-		return  res
+		self.no_zero_mean_vol = round(np.sqrt(ret.applymap(f).sum()/(ret.shape[0]-1))*np.sqrt(250), 3)
+		return  self.no_zero_mean_vol
+	
+	def getCorrCov(self, obj):
+		"""Ex II.3.7"""	
+
+		if 'zero_mean_ret' not in self.__dict__:
+			self.getUnCondVol()
+		if 'zero_mean_ret' not in obj.__dict__:
+			obj.getUnCondVol()
+
+		rets = pd.concat([self.zero_mean_ret, obj.zero_mean_ret], axis = 1)
+		return rets.corr(), rets.cov()
+
+
+
+
+
+
+
+
 
 
 

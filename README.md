@@ -1,6 +1,6 @@
 # MRA
 <p>Python Library developed for the book, Market Risk Analysis by Carol Alexander and other quantitative finance topics.</p>
-<p>The book, Market Risk analysis can be purchased <a href="http://www.amazon.com/Market-Analysis-Practical-Financial-Econometrics/dp/0470998016/ref=sr_1_4?ie=UTF8&qid=1445709183&sr=8-4&keywords=market+risk+analysis">Amazon</a>. You need the data from the companion CD.</p>  
+<p>The book, Market Risk analysis can be purchased <a href="http://www.amazon.com/Market-Analysis-Practical-Financial-Econometrics/dp/0470998016/ref=sr_1_4?ie=UTF8&qid=1445709183&sr=8-4&keywords=market+risk+analysis">Amazon</a>. You need data from the companion CD.</p>  
 
 ## Unit Test
 ####MRA - test
